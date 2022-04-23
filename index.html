@@ -55,9 +55,24 @@
       <section class="hero">
         <div class="wrapp-hero">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="button-hero" type="button">Заказать услугу</button>
+          <button class="button-hero" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
+
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button
+            class="modal-btn-close"
+            type="button"
+            aria-label="Закрыть модальное окно"
+            data-modal-close
+          >
+            <svg width="11" height="11">
+              <use href="./images/icons.svg#icon-modal-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
 
       <!-- section feature -->
       <section class="section">
@@ -118,13 +133,22 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="job-descr-list">
             <li class="job-descr-item">
-              <img src="./images/imgdescription.jpg" width="370" alt="Coding" />
+              <div class="job-descr-text">
+                <img src="./images/imgdescription.jpg" width="370" alt="Coding" />
+                <p>Десктопные приложения</p>
+              </div>
             </li>
             <li class="job-descr-item">
-              <img src="./images/imgdescription2.jpg" width="370" alt="Adaptive" />
+              <div class="job-descr-text">
+                <img src="./images/imgdescription2.jpg" width="370" alt="Adaptive" />
+                <p>Мобильные приложения</p>
+              </div>
             </li>
             <li class="job-descr-item">
-              <img src="./images/imgdescription3.jpg" width="370" alt="Webdesign" />
+              <div class="job-descr-text">
+                <img src="./images/imgdescription3.jpg" width="370" alt="Webdesign" />
+                <p>Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -476,5 +500,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
